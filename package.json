@@ -1,0 +1,54 @@
+{
+  "name": "get-twitter-followings",
+  "version": "1.0.1",
+  "description": "Get Twitter Followings from an User, inspired by 'get-twitter-followers' by Vladimir Starkov.",
+  "main": "index.es5.js",
+  "scripts": {
+    "coverage": "babel-node ./node_modules/.bin/isparta cover test.js",
+    "precoveralls": "npm run coverage",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "test": "babel-node test | tap-spec",
+    "tdd": "npm test -- --watch",
+    "transpile": "babel index.js --out-file index.es5.js",
+    "prepublish": "npm run transpile",
+    "clean": "rimraf index.es5.js",
+    "push": "git push --follow-tags",
+    "postpublish": "npm-run-all clean push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aladyn172/get-twitter-followings.git"
+  },
+  "keywords": [
+    "twitter",
+    "followings"
+  ],
+  "author": "Echo Services <echoservicess@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aladyn172/get-twitter-followings/issues"
+  },
+  "homepage": "https://github.com/aladyn172/get-twitter-followings#readme",
+  "devDependencies": {
+    "assert": "*",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^4.1.8",
+    "babel-plugin-add-module-exports": "^0.1.4",
+    "babel-preset-es2015": "^6.24.1",
+    "coveralls": "*",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-require-path-exists": "^1.1.5",
+    "get-twitter-info": "^2.0.1",
+    "isparta": "*",
+    "npm-run-all": "*",
+    "rimraf": "*",
+    "tap-spec": "*",
+    "tape": "*",
+    "twitter-tokens": "^1.0.2"
+  },
+  "dependencies": {
+    "ramda": "^0.19.1",
+    "twit": "^2.2.2"
+  }
+}
