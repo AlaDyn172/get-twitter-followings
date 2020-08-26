@@ -1,6 +1,6 @@
 {
   "name": "get-twitter-followings",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Get Twitter Followings from an User, inspired by 'get-twitter-followers' by Vladimir Starkov.",
   "main": "index.es5.js",
   "scripts": {

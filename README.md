@@ -16,7 +16,7 @@
 ```js
 import getTwitterFollowings from 'get-twitter-followings';
 
-getTwitterFollowings(tokens, 'jsunderhood').then(followings => {
+getTwitterFollowings(tokens, 'aladyn172').then(followings => {
   console.log(followings); // "User Objects" array https://dev.twitter.com/overview/api/users
 });
 ```
